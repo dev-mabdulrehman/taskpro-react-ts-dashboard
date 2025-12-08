@@ -15,6 +15,7 @@ The application follows a highly modular and organized structure, separating con
 | **`src/assets`** | Static files such as images, fonts, and global stylesheets. |
 | **`src/components`** | Reusable UI components (e.g., `Button`, `Header`). |
 | **`src/hooks`** | Custom React Hooks for encapsulating reusable logic (e.g., `useDebounce`). |
+| **`src/layouts`** | **Structural components that define page sections (e.g., `SidebarLayout`, `AuthLayout`).** |
 | **`src/middlewares`** | Logic executed before processing a request, typically for API interaction or state management side effects. |
 | **`src/pages`** | Top-level components that represent full pages/views (e.g., `Home`, `Settings`). |
 | **`routes.ts`** | Centralized configuration file for defining application routes. |
