@@ -1,78 +1,50 @@
-# ⚛️ vite-react-ts-tailwind-boilerplate (Clean & Organized)
+# 🚀 TaskPro Productivity Dashboard (React, TS, Tailwind Clone)
 
-This boilerplate provides a **robust, modern, and highly-optimized minimal setup** for developing **React** applications using **TypeScript**, **Vite**, and **Tailwind CSS**.
+This project is an **implementation** and **front-end cloning** of the stunning **TaskPro Productivity Dashboard App UI/UX** design.
 
-It has been **cleaned and reorganized** with a streamlined folder structure for immediate use.
+It is built using a **robust, modern, and highly-optimized minimal stack** for a production-ready application structure.
 
 ---
 
-## 📂 Project Structure Overview
+## 🎨 Design Credit & Inspiration
 
-The application follows a highly modular and organized structure, separating concerns into dedicated directories for better scalability and maintainability.
+This project is a code-based recreation of an existing UX/UI design concept.
+
+* **Original Design:** TaskPro | Productivity Dashboard App | UI/UX
+* **Platform:** Behance
+* **Designer:** **Yaroslava Zorenko**
+* **Designer Profile:** [https://www.behance.net/yaroslazorenko](https://www.behance.net/yaroslazorenko)
+* **Design Link:** [https://www.behance.net/gallery/188988385/TaskPro-Productivity-Dashboard-App-UXUI](https://www.behance.net/gallery/188988385/TaskPro-Productivity-Dashboard-App-UXUI)
+
+---
+
+## ⚙️ Project Stack & Key Features
+
+This project is configured with performance and developer experience as top priorities:
+
+| Technology | Purpose in Project | Feature/Goal |
+| :--- | :--- | :--- |
+| **React + TypeScript** | Component structure and strong type safety for data entities. | Strict, type-checked components for Tasks/Projects. |
+| **Vite** | Build tool and dev server. | Ultrafast build and Hot Module Replacement (HMR). |
+| **Tailwind CSS** | Styling solution. | Utility-first approach for implementing the custom, clean design aesthetics. |
+| **React Compiler** | Optimization tool. | Improves component performance by automatically memoizing prop dependencies. |
+| **ESLint (Type-Aware)** | Code Quality. | Enforces stricter rules, catching errors only visible via TypeScript analysis. |
+
+---
+
+## 📂 Project Structure for Dashboard Implementation
+
+The application follows a highly modular structure tailored for implementing the full TaskPro dashboard:
 
 | Folder | Purpose |
 | :--- | :--- |
 | **`src/assets`** | Static files such as images, fonts, and global stylesheets. |
-| **`src/components`** | Reusable UI components (e.g., `Button`, `Header`). |
-| **`src/hooks`** | Custom React Hooks for encapsulating reusable logic (e.g., `useDebounce`). |
-| **`src/layouts`** | **Structural components that define page sections (e.g., `SidebarLayout`, `AuthLayout`).** |
-| **`src/middlewares`** | Logic executed before processing a request, typically for API interaction or state management side effects. |
-| **`src/pages`** | Top-level components that represent full pages/views (e.g., `Home`, `Settings`). |
+| **`src/components`** | Reusable, small-scale UI components (e.g., `<Button>`, `<Input>`). |
+| **`src/hooks`** | Custom React Hooks for encapsulating reusable logic (e.g., `useTaskData`). |
+| **`src/layouts`** | **Structural components that define page sections** (e.g., `DashboardLayout`). |
+| **`src/middlewares`** | Logic executed before processing a request (e.g., API interaction or state management side effects). |
+| **`src/pages`** | Top-level components that represent full pages/views (e.g., `DashboardPage`, `SettingsPage`). |
+| **`src/types`** | **Centralized TypeScript Interfaces** for data models (e.g., `ITask`, `IProject`). |
 | **`routes.ts`** | Centralized configuration file for defining application routes. |
-| **`main.tsx`** | The entry point for rendering the main React application. |
 
 ---
-
-## ⚡️ Key Features & Performance
-
-This project is configured with performance and developer experience as top priorities:
-
-* **Vite:** Ultrafast build and dev server.
-* **TypeScript:** Strong type safety for large-scale applications.
-* **Hot Module Replacement (HMR):** Instantaneous updates during development.
-* **React Compiler (Enabled):** Improves component performance by automatically memoizing prop dependencies.
-    * **Note:** Enabling the React Compiler will slightly impact initial Vite dev and build performance.
-
-### ⚙️ Vite Plugins for Fast Refresh
-
-Vite offers two official plugins for React development, both enabling **Fast Refresh**:
-
-| Plugin | Compiler Used | Primary Benefit |
-| :--- | :--- | :--- |
-| **`@vitejs/plugin-react`** | [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) in [rolldown-vite](https://vite.dev/guide/rolldown)) | Standard and widely supported. |
-| **`@vitejs/plugin-react-swc`** | [SWC](https://swc.rs/) | Generally **faster** for larger projects. |
-
----
-
-## 🔬 Expanding the ESLint Configuration
-
-The project uses the modern **flat config format (`eslint.config.ts`)** and is set up for type-aware linting. For production applications, we highly recommend using the configurations below for maximum code quality.
-
-### 1. Enabling Type-Aware Linting
-
-To enforce stricter, type-checked rules in your **`eslint.config.ts`**, update your configuration to include the necessary settings and extend the type-checked recommended rules:
-
-```js
-// ... inside the configuration object for files: ['**/*.{ts,tsx}']
-    extends: [
-      // Other configs...
-      
-      // ✅ Recommended for all production apps (replaces tseslint.configs.recommended)
-      tseslint.configs.recommendedTypeChecked, 
-      
-      // 🚨 Alternatively, use this for the *strictest* possible rules
-      // tseslint.configs.strictTypeChecked,
-      
-      // ✨ Optionally, add this for stylistic rules
-      // tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        // ESSENTIAL: These paths allow ESLint to use TypeScript's type information
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // ... other options
-    },
