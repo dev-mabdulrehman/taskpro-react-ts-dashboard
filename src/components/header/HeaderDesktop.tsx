@@ -1,5 +1,5 @@
 import Container from "../Container"
-import SearchBar from "../SearchBar"
+import SearchBar from "../searchBar/SearchBar"
 import UserProfile from "../UserProfile"
 
 const HeaderDesktop = () => {

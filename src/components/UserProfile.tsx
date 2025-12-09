@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { UserProfileProps } from "../types/UserProfile";
 import useOutsideClick from '../hooks/useOutsideClick';
 import { Link } from 'react-router';
-// Assuming you created this hook
 
 const UserProfile = ({ name, email, avatarSrc }: UserProfileProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
