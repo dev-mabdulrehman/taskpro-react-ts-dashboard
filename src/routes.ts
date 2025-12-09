@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router';
 import Index from './pages/Index';
-import DashboardLayout from './layouts/DashboardLayout/DashboardLayout';
+import DashboardLayout from './layouts/dashboardLayout/DashboardLayout';
 import UnderConstruction from './components/UnderConstruction';
 
 export default createBrowserRouter([
