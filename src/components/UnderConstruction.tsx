@@ -3,7 +3,7 @@ import { useLocation } from "react-router"
 const UnderConstruction = () => {
     const location = useLocation();
     return (
-        <div>UnderConstruction {location.pathname}</div>
+        <div className="h-[300vh]">UnderConstruction {location.pathname}</div>
     )
 }
 
