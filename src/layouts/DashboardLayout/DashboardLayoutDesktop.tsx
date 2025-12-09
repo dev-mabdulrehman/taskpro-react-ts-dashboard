@@ -8,7 +8,7 @@ const DashboardLayoutDesktop = () => {
         <div className="flex min-h-screen">
             <Sidebar />
 
-            <div className="relative min-h-screen w-[calc(100%-384px)] flex flex-col ml-auto">
+            <div className="relative min-h-screen w-[calc(100%-272px)] lg:w-[calc(100%-384px)] flex flex-col ml-auto">
                 <HeaderDesktop />
 
                 <main className="grow overflow-y-auto">

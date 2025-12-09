@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
  * @param {number} breakpoint - The width (in pixels) defining the mobile/desktop split.
  * @returns {boolean} True if the screen is considered mobile.
  */
-const useIsMobile = (breakpoint: number = 768): boolean => {
+const useIsMobile = (breakpoint: number = 767.98): boolean => {
     const [isMobile, setIsMobile] = useState(() => window.innerWidth <= breakpoint);
 
     useEffect(() => {
